@@ -1,68 +1,81 @@
-const x = 3;
-const name = "Diana";
+/**
+ * TODO: Use a 'while' loop to log the numbers from 1 to 100.
+ * However, only log the odd numbers.
+ * HINT: Use an 'if' inside the while and use:
+ * i % 2 === 1 to determine if its odd.
+ */
 
-// TODO: Check if x is ODD AND if it's less than 10.
-if (x % 2 === 1 && x < 10) {
-  console.log("x is odd because it has a remainder of 1.");
+let i = 0;
+
+while (i <= 100) {
+  if (i % 2 === 1) {
+    console.log(i);
+  }
+  i += 1;
 }
 
-// TODO: Check if x is ODD OR if it's less than 10.
-if (x % 2 === 1 || x < 10) {
-  console.log("x is odd because it has a remainder of 1.");
+// Sum the numbers from 1 to 10.
+
+x = 0;
+sum = 0;
+
+while (x <= 10) {
+sum += x;
+x += 1;
 }
 
-// PRIMITIVES are compared by VALUE.
-// Result is TRUE.
-console.log(49 === 49);
+/**
+ * Fizz Buzz
+ * Log the numbers from 1 to 100.
+ * However, if the number is divisible by 3, log 'Fizz!'
+ * If the number is divisible by 5, log 'Buzz!'
+ * If the number is divisible by 3 and 5, log 'FizzBuzz!'
+ * Each number should only result in 1 log
+ */
 
-// OBJECTS are compared by REFERENCE.
-// Result is FALSE.
-const y = {
-  name: "Diana"
-};
+let y = 1;
 
-const z = {
-  name: "Diana"
-};
-
-console.log(y === z);
-
-console.log({ a: 42 } === { a: 42 });
-
-// PASS by VALUE.
-// Result is 3.
-let a = 3;
-
-let b = a;
-
-console.log(b);
-
-// PRIMITIVES CANNOT MUTATE.
-// '3' that was used with 'a' previously is completely thrown out and replaced with '4'.
-// Result is 3 - a is changed, but b is not.
-
-a = 4;
-
-console.log(b);
-
-// PASS by REFERENCE.
-// Result is Walsh - object that is referenced is changed.
-const c = {
-  name: "Diana"
-};
-
-const d = c;
-
-c.name = "Walsh";
-
-console.log(d.name);
-
-
-// TODO: Log the numbers from 1 to 10
-let x = 1;
-
-while (x < 10) {
-  // Always make sure that there is an exit condition.
-  x += 1;
-  console.log(x);
+while (y <= 100) {
+  if (y % 3 === 0 && y % 5 === 0) {
+    console.log("FizzBuzz!");
+  } else if (y % 3 === 0) {
+    console.log("Fizz!");
+  } else if (y % 5 === 0) {
+    console.log("Buzz!");
+  } else {
+    console.log (y);
+  }
+  y += 1;
 }
+
+/**
+ * '!' is the NOT operator. It's a UNARY OPERATOR.
+ * Using this in front of any data type (such as a number)
+ * will immediately convert that data type into a Boolean.
+ * Then, that value will be inverted as per the NOT operator.
+ */
+
+console.log(Boolean(0));
+console.log(!0);
+console.log(!111);
+console.log(!"Hello");
+console.log(!"");
+console.log(!true);
+
+// Simplified
+
+let z = 1;
+
+while (z <= 100) {
+  if (!(z % 3) && !(z % 5)) {
+    console.log("FizzBuzz!");
+  } else if (!(z % 3)) {
+    console.log("Fizz!");
+  } else if (!(z % 5)) {
+    console.log("Buzz!");
+  } else {
+    console.log (z);
+  }
+  z += 1;
+}
+
